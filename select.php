@@ -8,10 +8,12 @@
 
 	if ($con->connect_error)
 		die("Connection failed" . $con->connect_error);
-	
+	else
+		echo "connected successfully!";
+
 	$sql = "SELECT * FROM estate WHERE status = FALSE";
 	$result = $con->query($sql);  // apply query
-	
+
 	$output = "";
 	if ($result-> num_rows > 0)
 	{
