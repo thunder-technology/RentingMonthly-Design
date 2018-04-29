@@ -10,20 +10,24 @@
 		die("Connection failed" . $con->connect_error);
 	
 	$sql = "SELECT * FROM estate WHERE status = FALSE";
-	$result = $con->query($sql);  // apply query 
+	$result = $con->query($sql);  // apply query
 	
+	$output = "";
 	if ($result-> num_rows > 0)
+	{
 		while ($rows = $result->fetch_assoc())	// parsing data from query
 		{
-			echo '<br><p>';
-			echo "Type: " . $rows["type" ] .
-			 "Start Time: " . $rows["start_time"] .
-				 "End Time: " . $rows["end_time"];
-			echo '</p>';
+			$output = '<br><p>';
+			$output = $output . "Type: " . $rows["type" ] .
+			 				"Start Time: " . $rows["start_time"] .
+				 			"End Time: " . $rows["end_time"];
+			$output = $output . '</p>';
 		}
+	}
 	else
-		echo "0 results";
-	
+	{
+		$output = "0 results";
+	}
 	
 	$con->close();
 ?>
