@@ -2,7 +2,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$pass = "rentingmonthly";
-	$db = "estate";
+	$db = "house_info";
 
 	$con = new mysqli($servername, $username, $pass, $db);
 
