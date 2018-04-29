@@ -20,7 +20,7 @@
 <body data-type="index">
     <header class ="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
-            <a href="javascript:;" class="tpl-logo">
+            <a href="" class="tpl-logo">
                 <img src="assets/img/logo.png" alt="">
             </a>
         </div>
@@ -32,7 +32,7 @@
         <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
             <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
                 <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
-                    <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
+                    <a class="am-dropdown-toggle tpl-header-list-link" href="">
                         <span class="am-icon-bell-o"></span> 提醒 <span class="am-badge tpl-badge-success am-round">5</span></span>
                     </a>
                     <ul class="am-dropdown-content tpl-dropdown-content">
@@ -120,12 +120,12 @@
                         </a>
                     </li>
                     <li class="tpl-left-nav-item">
-                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list active">
+                        <a class="nav-link tpl-left-nav-link-list active">
                             <i class="am-icon-home"></i>
                             <span>表格</span>
                             <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
                         </a>
-                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                        <ul class="tpl-left-nav-sub-menu" style="display:block">
                             <li>
                                 <a href="table-font-list.html">
                                     <i class="am-icon-angle-right"></i>
@@ -195,68 +195,24 @@
                             <div class="tpl-caption font-green ">
                                 <span>North York</span>
                             </div>
-
                         </div>
 
                         <div class="am-tabs tpl-index-tabs" data-am-tabs="">
                             <ul class="am-tabs-nav am-nav am-nav-tabs">
-                                <li class="am-active"><a href="#tab1">进行中</a></li>
-
-                                <li><a herf="#tab2">空置</a></li>
+                                <li class="am-active"><a href="#tab1">已租出</a></li>
+                                <li><a href="#tab2">未租出</a></li>
                             </ul>
                             <div class="am-tabs-bd" style="-webkit-user-select:none; -webkit-user-drag: none;">
-                                <div class="am-tab-panel am-active" id="tab1">
-                                    <div id="wrapperA" class="wrapper">
-                                        <div id="scroller" class="scroller">
-                                            <ul class="tpl-task-list tpl-task-remind">
-                                                <li>
-                                                    <div class="cosB">
-                                                        36分钟前
-                                                    </div>
-                                                    <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                                                        <i class="am-icon-bolt"></i>
-                                                        </span>
+                                    <div class="am-tab-panel am-active" id="tab1">
+                                        <div id="wrapperA" class="wrapper">
+                                            <div id="scroller" class="scroller">
+                                                <!-- 这里需要添加php代码-->
+                                                <form action="select.php">
 
-                                                        <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
-                                                    </div>
-
-                                                </li>
-
-                                                <li>
-                                                    <div class="cosB">
-                                                        2小时前
-                                                    </div>
-                                                    <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
-                                                        <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
-                                                    </div>
-
-                                                </li>
-                                                <li>
-                                                    <div class="cosB">
-                                                        1天前
-                                                    </div>
-                                                    <div class="cosA">
-                                                        <span class="cosIco label-warning">
-                        <i class="am-icon-plus"></i>
-                      </span>
-
-                                                        <span> 部分用户反应在过长的 Tabs 中滚动页面时会意外触发 Tab 切换事件，用户可以选择禁用触控操作。</span>
-                                                    </div>
-
-                                                </li>
-
-
-
-
-                                            </ul>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 <div class="am-tab-panel" id="tab2">
                                     <div id="wrapperA" class="wrapper">
                                         <div id="scroller" class="scroller">
@@ -334,6 +290,7 @@
 
                                 <li><a herf="#tab2">空置</a></li>
                             </ul>
+                            <form action="insert.php">
                             <div class="am-tabs-bd" style="-webkit-user-select:none; -webkit-user-drag: none;">
                                 <div class="am-tab-panel am-active" id="tab1">
                                     <div id="wrapperA" class="wrapper">
@@ -377,12 +334,7 @@
 
                                                         <span> 部分用户反应在过长的 Tabs 中滚动页面时会意外触发 Tab 切换事件，用户可以选择禁用触控操作。</span>
                                                     </div>
-
                                                 </li>
-
-
-
-
                                             </ul>
                                         </div>
                                     </div>
@@ -471,13 +423,14 @@
 
                         <div class="am-tabs tpl-index-tabs" data-am-tabs="">
                             <ul class="am-tabs-nav am-nav am-nav-tabs">
-                                <li class="am-active"><a href="#tab1">进行中</a></li>
+                                <li class="am-active"><a href="#tab1">已租出</a></li>
 
-                                <li><a herf="#tab2">空置</a></li>
+                                <li><a herf="#tab2">未租出</a></li>
                             </ul>
                             <div class="am-tabs-bd" style="-webkit-user-select:none; -webkit-user-drag: none;">
                                 <div class="am-tab-panel am-active" id="tab1">
                                     <div id="wrapperA" class="wrapper">
+                                        <form action="insert.php">
                                         <div id="scroller" class="scroller">
                                             <ul class="tpl-task-list tpl-task-remind">
                                                 <li>
@@ -488,7 +441,6 @@
                                                         <span class="cosIco label-danger">
                                                         <i class="am-icon-bolt"></i>
                                                         </span>
-
                                                         <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
                                                     </div>
 
@@ -499,10 +451,7 @@
                                                         2小时前
                                                     </div>
                                                     <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
+                                                        <span class="cosIco label-info"><i class="am-icon-bullhorn"></i></span>
                                                         <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
                                                     </div>
 
@@ -512,20 +461,14 @@
                                                         1天前
                                                     </div>
                                                     <div class="cosA">
-                                                        <span class="cosIco label-warning">
-                        <i class="am-icon-plus"></i>
-                      </span>
-
+                                                        <span class="cosIco label-warning"><i class="am-icon-plus"></i></span>
                                                         <span> 部分用户反应在过长的 Tabs 中滚动页面时会意外触发 Tab 切换事件，用户可以选择禁用触控操作。</span>
                                                     </div>
 
                                                 </li>
-
-
-
-
                                             </ul>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="am-tab-panel" id="tab2">
@@ -537,10 +480,7 @@
                                                         36分钟前
                                                     </div>
                                                     <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                                                        <i class="am-icon-bolt"></i>
-                                                        </span>
-
+                                                        <span class="cosIco label-danger"><i class="am-icon-bolt"></i></span>
                                                         <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
                                                     </div>
 
