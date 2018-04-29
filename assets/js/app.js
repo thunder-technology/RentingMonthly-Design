@@ -10,12 +10,12 @@ $(function() {
         });
 
 
-        var dataType = $('body').attr('data-type');
-        for (key in pageData) {
-            if (key == dataType) {
-                pageData[key]();
-            }
-        }
+         var dataType = $('body').attr('data-type');
+         for (key in pageData) {
+             if (key == dataType) {
+                 pageData[key]();
+             }
+         }
 
         $('.tpl-switch').find('.tpl-switch-btn-view').on('click', function() {
             $(this).prev('.tpl-switch-btn').prop("checked", function() {
