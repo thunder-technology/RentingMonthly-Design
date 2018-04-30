@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="js cssanimations"><head>
+<html class="js cssanimations">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Amaze UI Admin index Examples</title>
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 </head>
 
 <body data-type="index" style="">
@@ -178,15 +180,9 @@
                         </li>
                     </ul>
                 </li>
-
-
             </ul>
         </div>
     </div>
-
-
-
-
 
     <div class="tpl-content-wrapper">
         <div class="tpl-content-page-title">
@@ -222,220 +218,20 @@
                             <li class=""><a href="#tab1">租赁中</a></li>
                             <li class="am-active"><a href="#tab2">空置中</a></li>
                         </ul>
-
+                        <!-- mysql 内容-->
                         <div class="am-tabs-bd" style="-webkit-user-select: none; -webkit-user-drag: none;">
-                            <div class="am-tab-panel am-fade" id="tab1">
-                                <div id="wrapperA" class="wrapper">
-                                    <div id="scroller" class="scroller" style="transform: translate(0px, 0px) translateZ(0px);">
-                                        <ul class="tpl-task-list tpl-task-remind">
-                                            <li>
-                                                <div class="cosB">
-                                                    12分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco">
-                        <i class="am-icon-bell-o"></i>
-                      </span>
+                            <!-- 这里插入数据库内容 -->
+                            <div class="am-tab-panel am-fade">
+                                <div class="wrapper">
+                                    <div class="scroller" style="transform: translate(0px, 0px) translateZ(0px);">
+                                        <ul class="tpl-task-list tpl-task-remind rented" value="north_york">
 
-                                                    <span> 注意：Chrome 和 Firefox 下， display: inline-block; 或 display: block; 的元素才会应用旋转动画。<span class="tpl-label-info"> 提取文件
-                                                            <i class="am-icon-share"></i>
-                                                        </span></span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    36分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                        <i class="am-icon-bolt"></i>
-                      </span>
-
-                                                    <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
-                                                </div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="cosB">
-                                                    2小时前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
-                                                    <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    1天前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-warning">
-                        <i class="am-icon-plus"></i>
-                      </span>
-
-                                                    <span> 部分用户反应在过长的 Tabs 中滚动页面时会意外触发 Tab 切换事件，用户可以选择禁用触控操作。</span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    12分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco">
-                        <i class="am-icon-bell-o"></i>
-                      </span>
-
-                                                    <span> 注意：Chrome 和 Firefox 下， display: inline-block; 或 display: block; 的元素才会应用旋转动画。<span class="tpl-label-info"> 提取文件
-                                                            <i class="am-icon-share"></i>
-                                                        </span></span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    36分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                        <i class="am-icon-bolt"></i>
-                      </span>
-
-                                                    <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
-                                                </div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="cosB">
-                                                    2小时前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
-                                                    <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
-                                                </div>
-
-                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 9999; width: 7px; bottom: 2px; top: 2px; right: 1px; overflow: hidden; transform: translateZ(0px); transition-duration: 500ms; opacity: 0;"><div class="iScrollIndicator" style="box-sizing: border-box; position: absolute; background-color: rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; width: 100%; transition-duration: 0ms; display: block; height: 331px; transform: translate(0px, 0px) translateZ(0px); background-position: initial initial; background-repeat: initial initial;"></div></div></div>
+                                </div>
                             </div>
-                            <div class="am-tab-panel am-fade am-active am-in" id="tab2">
-                                <div id="wrapperB" class="wrapper">
-                                    <div id="scroller" class="scroller" style="transform: translate(0px, 0px) translateZ(0px);">
-                                        <ul class="tpl-task-list tpl-task-remind">
-                                            <li>
-                                                <div class="cosB">
-                                                    12分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco">
-                        <i class="am-icon-bell-o"></i>
-                      </span>
-
-                                                    <span> 注意：Chrome 和 Firefox 下， display: inline-block; 或 display: block; 的元素才会应用旋转动画。<span class="tpl-label-info"> 提取文件
-                                                            <i class="am-icon-share"></i>
-                                                        </span></span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    36分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                        <i class="am-icon-bolt"></i>
-                      </span>
-
-                                                    <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
-                                                </div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="cosB">
-                                                    2小时前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
-                                                    <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    1天前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-warning">
-                        <i class="am-icon-plus"></i>
-                      </span>
-
-                                                    <span> 部分用户反应在过长的 Tabs 中滚动页面时会意外触发 Tab 切换事件，用户可以选择禁用触控操作。</span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    12分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco">
-                        <i class="am-icon-bell-o"></i>
-                      </span>
-
-                                                    <span> 注意：Chrome 和 Firefox 下， display: inline-block; 或 display: block; 的元素才会应用旋转动画。<span class="tpl-label-info"> 提取文件
-                                                            <i class="am-icon-share"></i>
-                                                        </span></span>
-                                                </div>
-
-                                            </li>
-                                            <li>
-                                                <div class="cosB">
-                                                    36分钟前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-danger">
-                        <i class="am-icon-bolt"></i>
-                      </span>
-
-                                                    <span> FontAwesome 在绘制图标的时候不同图标宽度有差异， 添加 .am-icon-fw 将图标设置为固定的宽度，解决宽度不一致问题（v2.3 新增）。</span>
-                                                </div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="cosB">
-                                                    2小时前
-                                                </div>
-                                                <div class="cosA">
-                                                        <span class="cosIco label-info">
-                        <i class="am-icon-bullhorn"></i>
-                      </span>
-
-                                                    <span> 使用 flexbox 实现，只兼容 IE 10+ 及其他现代浏览器。</span>
-                                                </div>
-
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="iScrollVerticalScrollbar iScrollLoneScrollbar" style="position: absolute; z-index: 9999; width: 7px; bottom: 2px; top: 2px; right: 1px; overflow: hidden; transform: translateZ(0px); transition-duration: 0ms; opacity: 0;"><div class="iScrollIndicator" style="box-sizing: border-box; position: absolute; background-color: rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; width: 100%; transition-duration: 0ms; display: block; height: 331px; transform: translate(0px, 0px) translateZ(0px); background-position: initial initial; background-repeat: initial initial;"></div></div></div>
-                            </div>
-
                         </div>
+                        <!-- 这里以上是数据-->
                     </div>
 
                 </div>
@@ -447,7 +243,6 @@
                         <div class="tpl-caption font-green ">
                             <span>Downtown</span>
                         </div>
-
                     </div>
 
                     <div class="am-tabs tpl-index-tabs" data-am-tabs="">
