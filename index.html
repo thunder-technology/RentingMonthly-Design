@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/echarts.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/mysql_analysis.js"></script>
 </head>
 
 <body data-type="index" style="">
@@ -213,8 +214,8 @@
 
                     <div class="am-tabs tpl-index-tabs" data-am-tabs="">
                         <ul class="am-tabs-nav am-nav am-nav-tabs">
-                            <li class=""><a href="#tab1">租赁中</a></li>
-                            <li class="am-active"><a href="#tab2">空置中</a></li>
+                            <li class=""><a href="#northyork_sold">租赁中</a></li>
+                            <li class="am-active"><a href="#northyork_unsold">空置中</a></li>
                         </ul>
                         <!-- mysql 内容-->
                         <div class="am-tabs-bd" style="-webkit-user-select: none; -webkit-user-drag: none;">
@@ -222,7 +223,16 @@
                             <div class="am-tab-panel am-fade">
                                 <div class="wrapper">
                                     <div class="scroller" style="transform: translate(0px, 0px) translateZ(0px);">
-                                        <ul class="tpl-task-list tpl-task-remind north_york">
+                                        <ul class="tpl-task-list tpl-task-remind north_york" id="northyork_sold">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-tab-panel am-fade">
+                                <div class="wrapper">
+                                    <div class="scroller" style="transform: translate(0px, 0px) translateZ(0px);">
+                                        <ul class="tpl-task-list tpl-task-remind north_york" id="northyork_unsold">
 
                                         </ul>
                                     </div>
