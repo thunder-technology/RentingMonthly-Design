@@ -1,4 +1,4 @@
-$.get("select.php", function (data) {
+$.get("~/Desktop/rm_admin/select.php", function (data) {
         $(".north_york")
             .append(" " + data.estate_type)
             .append(" " + data.start_time)
