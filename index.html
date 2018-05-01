@@ -634,7 +634,7 @@
     $.get("select.php", function (data) {
             var new_data = JSON.parse(data);
         }, json);
-
+    alert(JSON.stringify(data));
     if (new_data.area === "NORTH YORK") {
         $("#north_york_sold")
             .append("<li>")
