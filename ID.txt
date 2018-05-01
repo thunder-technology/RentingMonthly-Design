@@ -26,10 +26,11 @@ Markham
 
 提醒
 remind1
-TX
+TXN
 
 消息
 info1
+INFONM
 
 账号
 account1
