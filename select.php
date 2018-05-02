@@ -15,7 +15,6 @@
 
 	if ($con->connect_error)
 		die("Connection failed" . $con->connect_error);
-
 	// connect to query
 	$sql = "SELECT * FROM estate WHERE 1";
 	$result = $con->query($sql);  // apply query
