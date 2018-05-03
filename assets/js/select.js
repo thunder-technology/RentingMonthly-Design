@@ -13,7 +13,7 @@ $.get("select.php", function (data) {
             .concat('</span>')
             .concat('</div>')
             .concat("</li>");
-        
+
         if ($(value).attr("area") === "NORTH YORK") {
             if ($(value).attr("status") === "1") {
                 $("#north_york_sold").append(content);
