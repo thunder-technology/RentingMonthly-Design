@@ -9,7 +9,7 @@ $.get("select.php", function (data) {
             .append('</div>')
             .append('<div class="cosA">')
             .append('<span>')
-            .append("房屋类型：" + $(value).attr("type").text())
+            .append("房屋类型：" + $(value).attr("type"))
             .append('</span>')
             .append('</div>')
             .append("</li>");
