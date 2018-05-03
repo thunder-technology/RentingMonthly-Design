@@ -1,11 +1,8 @@
 $.get("select.php", function (data) {
-    xml = $.parseXML(data),
-        $data = $( xml ),
-        $markers = $data.find("marker"); // get all option nodes
-    var area = $markers.attr("area");
-    alert(area);
+    var markers = $(data).find('marker');
+    var area = markers.attr("area");
     console.log(area);
-}, json);
+});
 
 if (area === "NORTH YORK") {
     $("#north_york_sold")
