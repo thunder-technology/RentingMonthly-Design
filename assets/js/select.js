@@ -1,7 +1,6 @@
 $.get("select.php", function (data) {
     var markers = $(data).find('marker');
     var area = markers.attr("area");
-    alert(area.text());
     if (area === "NORTH YORK") {
         $("#north_york_sold")
             .append("<li>")
