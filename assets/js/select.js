@@ -4,12 +4,10 @@ $.get("select.php", function (data) {
     $(data).find("marker").each(function(index, value) {
         var content = ""
             .concat("<li>")
-            .concat('<div class="cosB">')
-            .concat("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
-            .concat('</div>')
             .concat('<div class="cosA">')
             .concat('<span>')
-            .concat("房屋类型：" + $(value).attr("type"))
+            .concat("房屋类型：" + $(value).attr("estate_type") + "<br>")
+            .concat($(value).attr("start_time") + "至" + $(value).attr("end_time"))
             .concat('</span>')
             .concat('</div>')
             .concat("</li>");
