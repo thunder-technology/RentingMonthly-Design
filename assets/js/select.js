@@ -1,8 +1,9 @@
 // retrieve the XML data from select.php
+$content = "";
 $.get("select.php", function (data) {
     // Iteratively go through each marker tag
     $(data).find("marker").each(function(index, value) {
-        $content = ""
+        $content
             .append("<li>")
             .append('<div class="cosB">')
             .append("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
