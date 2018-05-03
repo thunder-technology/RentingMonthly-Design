@@ -47,10 +47,12 @@
         }
     };
 
+
     // Call geocode
     geocode();
 
     function geocode() {
+
         var location="5 Sheppard Ave E.";
         axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
           params: {
