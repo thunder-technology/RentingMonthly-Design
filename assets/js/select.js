@@ -2,8 +2,7 @@
 $.get("select.php", function (data) {
     // Iteratively go through each marker tag
     $(data).find("marker").each(function(index, value) {
-        var content = "";
-        content
+        var content = ""
             .concat("<li>")
             .concat('<div class="cosB">')
             .concat("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
