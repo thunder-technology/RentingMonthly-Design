@@ -10,12 +10,12 @@ $.get("select.php", function (data) {
                     .append('<div class="cosB">')
                     .append("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
                     .append('</div>')
-                    .append('<div> class="cosA"')
+                    .append('<div class="cosA">')
                     .append('<span>')
                     .append("房屋类型：" + $(value).find("type").text())
                     .append('</span>')
-                    .append("</li>")
-                    .append('</div>');
+                    .append('</div>')
+                    .append("</li>");
             }
             else if ($(value).attr("status") === "0")
             {
@@ -24,12 +24,12 @@ $.get("select.php", function (data) {
                     .append('<div class="cosB">')
                     .append("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
                     .append('</div>')
-                    .append('<div> class="cosA"')
+                    .append('<div class="cosA">')
                     .append('<span>')
                     .append("房屋类型：" + $(value).find("type").text())
                     .append('</span>')
-                    .append("</li>")
-                    .append('</div>');
+                    .append('</div>')
+                    .append("</li>");
             }
         }
         else if ($(value).attr("area") === "MISSISAUGA") {
@@ -40,12 +40,12 @@ $.get("select.php", function (data) {
                     .append('<div class="cosB">')
                     .append("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
                     .append('</div>')
-                    .append('<div> class="cosA"')
+                    .append('<div class="cosA">')
                     .append('<span>')
                     .append("房屋类型：" + $(value).find("type").text())
                     .append('</span>')
-                    .append("</li>")
-                    .append('</div>');
+                    .append('</div>')
+                    .append("</li>");
             }
             else if ($(value).attr("status") === "0")
             {
@@ -54,12 +54,12 @@ $.get("select.php", function (data) {
                     .append('<div class="cosB">')
                     .append("从" + $(value).attr("start_time") + "到" + $(value).attr("end_time"))
                     .append('</div>')
-                    .append('<div> class="cosA"')
+                    .append('<div class="cosA">')
                     .append('<span>')
                     .append("房屋类型：" + $(value).find("type").text())
                     .append('</span>')
-                    .append("</li>")
-                    .append('</div>');
+                    .append('</div>')
+                    .append("</li>");
             }
         }
     });
