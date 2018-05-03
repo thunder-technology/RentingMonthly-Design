@@ -5,12 +5,13 @@ $.get("select.php", function (data) {
         $("#north_york_sold")
             .append("<li>")
             .append('<div class="cosB">')
-            .append("from" + markers.find("start_time").text() + "to" + markers.find("end_time").text())
+            .append("从" + markers.attr("start_time") + "到" + markers.attr("end_time"))
             .append('</div>')
             .append('<div> class="cosA"')
             .append('<span>')
             .append("房屋类型：" + markers.find("type").text())
             .append('</span>')
-            .append("</li>");
+            .append("</li>")
+            .append('</div>');
     }
 });
