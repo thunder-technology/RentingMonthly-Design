@@ -34,19 +34,13 @@ $.get("select.php", function (data) {
         //添加内容到房源信息页面
         var fangyuan = ""
                 .concat("<tr>")
-                .concat("<td>")
-                .concat("<input type=checkbox>")
-                .concat("</td>")
-                .concat("<td>")
-                .concat($(value).attr("id"))
-                .concat("</td>")
-                .concat("<td>")
-                .concat("<a href=\"\">" + $(value).attr("address") + "</a>")
-                .concat("</td>")
+                .concat("<td>" + "<input type=checkbox>" + "</td>")
+                .concat("<td>" + $(value).attr("id") + "</td>")
+                .concat("<td>" + "<a href=\"\">" + $(value).attr("address") + "</a>" + "</td>")
                 .concat("<td>" + $(value).attr("estate_type") + "</td>")
                 .concat("<td class=\"am-hide-sm-only\">" + zicarb +"</td>")
-                .concat("<td class=\"am-hide-sm-only\">" +  Date.now() + "</td>");
-
+                .concat("<td class=\"am-hide-sm-only\">" +  Date.now() + "</td>")
+                .concat("</tr>");
         //添加到列表
         $("#fangyuan").append(fangyuan);
     });
