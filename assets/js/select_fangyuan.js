@@ -7,7 +7,7 @@ $.get("select.php", function (data) {
                 .concat("<td>" + $(value).attr("id") + "</td>")
                 .concat("<td>" + '<a href="">' + $(value).attr("address") + "</a>" + "</td>")
                 .concat("<td>" + $(value).attr("estate_type") + "</td>")
-                .concat('<td class="am-hide-sm-only">' + zicarb +"</td>")
+                .concat('<td class="am-hide-sm-only">zicarb</td>')
                 .concat('<td class="am-hide-sm-only">' +  Date.now().toString() + "</td>")
             .concat("</tr>")
             .concat('<td class="am-hide-sm-only">')
