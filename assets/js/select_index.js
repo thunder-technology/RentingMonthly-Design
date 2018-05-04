@@ -1,14 +1,14 @@
 // retrieve the XML data from select.php
 $.get("select.php", function (data) {
-    // Iteratively go through each marker tag
     $(data).find("marker").each(function(index, value) {
 
+        // Iteratively go through each marker tag
         var content = ""
             .concat("<li>")
             .concat('<div class="cosA">')
             .concat('<span>')
-            .concat("房屋类型：" + $(value).attr("estate_type") + '<tr>')
-            .concat("房屋地址: " + $(value).attr("address") + '<br>')
+            .concat("房屋地址: " + $(value).attr("address") + "<br>")
+            .concat("房屋类型：" + $(value).attr("estate_type") + "<br>")
             .concat($(value).attr("start_time") + "至" + $(value).attr("end_time"))
             .concat('</span>')
             .concat('</div>')

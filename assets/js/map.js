@@ -46,23 +46,24 @@ window.eqfeed_callback = function(results) {
 geocode();
 
 function geocode() {
+    $.get("select.php", function (data) {
+        $(data).find("marker").each(function(index, value) {
+           var location = $(value).attr("address");
 
-    var location="5 Sheppard Ave E.";
-    axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
-        params: {
-            address : location,
-            key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
-        }
-    })
-        .then(function (response)
-        {
-            // Log Full response
-            console.log(response);
-
-            // Formatted Address
-            console.log()
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
+            axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
+                params: {
+                    address : location,
+                    key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
+                }
+            })
+                .then(function (response)
+                {
+                    // Log Full response
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        });
+    });
 }
