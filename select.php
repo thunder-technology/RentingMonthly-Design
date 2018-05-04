@@ -36,6 +36,7 @@
 		//  the code above is for parsing json data
 			$node = $doc->createElement("marker");
  		 	$newnode = $parnode->appendChild($node);
+ 		 	$newnode->setAttribute("id", $rows['id']);
 			$newnode->setAttribute("area", $rows['area']);
 	 	 	$newnode->setAttribute("estate_type", $rows['type']);
 		 	$newnode->setAttribute("start_time", $rows['start_time']);
