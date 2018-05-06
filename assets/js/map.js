@@ -16,7 +16,7 @@ function initMap() {
                 map: map,
                 position: pos,
                 draggable: true,
-                animation: google.maps.Animation.DROP,
+                animation: google.maps.Animation.DROP
             });
             marker.addListener('click', function() {
                 window.location.href = this.url;
