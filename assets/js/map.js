@@ -8,7 +8,7 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
-    setTimeout(geocode(), 1000);
+    setTimeout(geocode(), 2000);
 }
 
 function geocode() {
