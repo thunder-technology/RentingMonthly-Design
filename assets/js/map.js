@@ -8,8 +8,7 @@ function initMap() {
     var infoWindow = new google.maps.InfoWindow;
 
     $.get('select.php', function(data) {
-        var xml = data.responseXML;
-        var markers = xml.documentElement.getElementsByTagName('marker');
+        var markers = data.find('marker');
         Array.prototype.forEach.call(markers, function(markerElem) {
             var type = $(markerElem).attr('type');
             var pos = geocode($(markerElem).attr('address'));
