@@ -1,5 +1,11 @@
 
 var addresses = [];
+
+function initialize()
+{
+    initMap();
+    geocode();
+}
 function initMap() {
     $("#map").
         map = new google.maps.Map(document.getElementById('map'), {
@@ -21,8 +27,6 @@ function initMap() {
             addresses.push(address);
         });
     });
-
-    geocode();
 }
 
 function geocode() {
