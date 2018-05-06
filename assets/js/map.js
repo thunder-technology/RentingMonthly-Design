@@ -23,16 +23,6 @@ function initMap() {
             });
         });
     });
-
-    for(var i = 0; i < addresses.length; i++)
-    {
-        new google.maps.Marker({
-            map: map,
-            draggable: true,
-            animation: google.maps.Animation.DROP,
-            position: {lat: addresses[i].lat, lng: addresses[i].lng}
-        });
-    }
 }
 
 function geocode(address) {
