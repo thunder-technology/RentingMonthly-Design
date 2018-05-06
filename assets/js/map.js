@@ -8,9 +8,7 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
-    google.maps.event.addListener( map, 'idle', function() {
-        geocode();
-    });
+    setTimeout(geocode(), 1000);
 }
 
 function geocode() {
