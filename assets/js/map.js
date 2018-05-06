@@ -25,7 +25,7 @@ function initMap() {
                 //     console.log(location);
                 //     return {lat :location.lat, lng :location.lng};
                 // }
-                    function getPropertyMarkers(response) {
+                    function (response) {
                         var location = response.data.results[0].geometry.location;
                         console.log(location);
                         $.ajax({
