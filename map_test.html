@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var toronto = {lat: 43.6532, lng: -79.3832};
+        var north_york = {lat :43.7614611, lng:-79.4098016};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: toronto,
+            mapTypeId: ROADMAP
+        });
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+            positions: toronto,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQZG_69CD1G-08KL_uQ7T7fopFU0iGTXY&callback=initMap">
+</script>
+</body>
+</html>

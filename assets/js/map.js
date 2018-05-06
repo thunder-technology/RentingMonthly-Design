@@ -1,47 +1,58 @@
 //获取数据库的所有租房信息
-$.get("select.php", function (data) {
-    $(data).find("marker").each(function(index, value) {
-        var content = ""
-            .concat();
-
-        // 搜索所有没被租出的房屋
-        if ($(value).attr("status") === "0") {
-            // 获取地址
-            address = $(value).attr("address");
-            results.add(address);
-        }
-
-
-    });
-});
-
-var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: new google.maps.LatLng(43.6532, -79.3832),
         mapTypeId: 'terrain'
     });
+    var infoWindow = new google.maps.InfoWindow;
 
+    $.get('select.php', function(data) {
+        var xml = data.responseXML;
+        var markers = xml.documentElement.getElementsByTagName('marker');
+        Array.prototype.forEach.call(markers, function(markerElem) {
+            var type = $(markerElem).attr('type');
+            var pos = geocode($(markerElem).attr('address'));
+            var icon = customLabel[type] || {};
+            var marker = new google.maps.Marker({
+                map: map,
+                position: pos,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                label: icon.label
+            });
+            marker.addListener('click', function() {
+                window.location.href = this.url;
+            });
+        });
+    });
+
+    for(var i = 0; i < addresses.length; i++)
+    {
+        new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+            position: {lat: addresses[i].lat, lng: addresses[i].lng}
+        });
+    }
 }
 
-function geocode() {
+function geocode(address) {
     axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
         params: {
-            address : "5 sheppard Ave E.",
+            address : address,
             key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
         }
     })
         .then(function(response)
         {
             // Log Full response
-            location = response.data.results[0].location;
+            var location = response.data.results[0].geometry.location;
             console.log(location);
+            return {lat :location.lat, lng :location.lng};
         })
         .catch(function (error) {
             console.log(error);
         });
 }
-
-geocode();
-
