@@ -12,13 +12,11 @@ function initMap() {
         Array.prototype.forEach.call(markers, function(markerElem) {
             var type = $(markerElem).attr('type');
             var pos = geocode($(markerElem).attr('address'));
-            var icon = customLabel[type] || {};
             var marker = new google.maps.Marker({
                 map: map,
                 position: pos,
                 draggable: true,
                 animation: google.maps.Animation.DROP,
-                label: icon.label
             });
             marker.addListener('click', function() {
                 window.location.href = this.url;
