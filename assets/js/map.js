@@ -6,6 +6,7 @@ function initMap() {
             mapTypeId: 'terrain'
         });
     });
+
     var infoWindow = new google.maps.InfoWindow;
     //获取数据库的所有租房信息
     $.get('select.php', function(data) {
@@ -24,45 +25,24 @@ function initMap() {
             })
                 // 异步编程，数据通过ajax异步地添加到map
                 .then(
-                //     function(response) {
-                //
-                //     // Log Full response
-                //     var location = response.data.results[0].geometry.location;
-                //     console.log(location);
-                //     return {lat :location.lat, lng :location.lng};
-                // }
                     function (response) {
-                        $.ajax({
-                            type: "POST",
-                            data: "{'response': '" + response + "'}",
-                            async: true,
-                            cache: true,
-                            contentType: "application/json;",
-                            dataType: "json",
-                            success: function (data, textStatus, jqXHR) {
-                                // 这里data是response数据
-                                // 提取坐标数据
-                                var location = data.data.results[0].geometry.location;
-                                console.log(location);
-                                var marker = new google.maps.Marker({
-                                    map: map,
-                                    position: location,
-                                    draggable: true,
-                                    animation: google.maps.Animation.DROP
-                                });
-                            },
-                            // 异常处理
-                            error: function (xmlHttpRequest, textStatus, errorThrown) {
-                                console.log(xmlHttpRequest.responseText);
-                                console.log(textStatus);
-                                console.log(errorThrown);
-                                alert("Screen shot this error: " + xmlHttpRequest.toString() + " " + textStatus.toString() + " " + errorThrown.toString());
-                            }
+                        // 这里data是response数据
+                        // 提取坐标数据
+
+                        var location = data.data.results[0].geometry.location;
+                        console.log(location);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: location,
+                            draggable: true,
+                            animation: google.maps.Animation.DROP
                         });
                     }
                 , function (error) {
                     console.log(error);
-                });
+                })
         });
     });
 }
+
+google.maps.event.addDomListener(window, 'load', initMap);
