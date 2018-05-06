@@ -33,7 +33,6 @@ function initMap() {
                 // }
                     function (response) {
                         $.ajax({
-                            url: "Service/MapData.asmx/getPropertyMarkers",
                             type: "POST",
                             data: "{'response': '" + response + "'}",
                             async: true,
