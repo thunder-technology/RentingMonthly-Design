@@ -1,5 +1,5 @@
 
-var addresses;
+var addresses = [];
 function initMap() {
     $("#map").
         map = new google.maps.Map(document.getElementById('map'), {
@@ -18,7 +18,7 @@ function initMap() {
             // 提取地址数据
             var address = $(markerElem).attr('address');
             // 地址 -> 坐标
-            addresses.add(address);
+            addresses.push(address);
         });
     });
 }
