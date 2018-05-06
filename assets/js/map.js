@@ -24,7 +24,7 @@ function initMap() {
                 }
             })
                 // 异步编程，数据通过ajax添加到map
-                .done(
+                .then(
                     function (response) {
                         // 提取坐标数据
                         var location = response.data.results[0].geometry.location;
@@ -35,6 +35,8 @@ function initMap() {
                             draggable: true,
                             animation: google.maps.Animation.DROP
                         });
+                    }, function (error) {
+                        console.log(error);
                     })
         });
     });
