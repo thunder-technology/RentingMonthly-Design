@@ -25,7 +25,7 @@ function geocode() {
             // 地址 -> 坐标
             axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
                 params: {
-                    address : addresses[i],
+                    address : address,
                     key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
                 }
             })
