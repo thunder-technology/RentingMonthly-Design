@@ -45,7 +45,7 @@ function geocode() {
                             } else {
                                 marker.setAnimation(google.maps.Animation.BOUNCE);
                             }
-                            infowindow.open(map, marker);
+                            infoWindow.open(map, marker);
                         });
                     }, function (error) {
                         console.log(error);
