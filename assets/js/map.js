@@ -33,8 +33,8 @@ function geocode() {
                         // 提取坐标数据
                         var location = response.data.results[0].geometry.location;
                         var contentString = ""
-                            .concat('地址: ' + address + '<br>')
-                            .concat('租期: ' + $(markerElem).attr('start_time') + "至" + $(markerElem).attr('end_time'));
+                            .concat('address: ' + address + '<br>')
+                            .concat('from: ' + $(markerElem).attr('start_time') + " to " + $(markerElem).attr('end_time'));
                         var infoWindow = new google.maps.InfoWindow({
                                 content : contentString
                             });
