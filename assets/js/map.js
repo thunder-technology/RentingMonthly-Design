@@ -23,13 +23,11 @@ function initMap() {
                     key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
                 }
             })
-                // 异步编程，数据通过ajax异步地添加到map
+                // 异步编程，数据通过ajax添加到map
                 .then(
                     function (response) {
-                        // 这里data是response数据
                         // 提取坐标数据
-
-                        var location = data.data.results[0].geometry.location;
+                        var location = response.data.results[0].geometry.location;
                         console.log(location);
                         var marker = new google.maps.Marker({
                             map: map,
