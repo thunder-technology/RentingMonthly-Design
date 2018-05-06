@@ -32,7 +32,6 @@ function geocode() {
                     function (response) {
                         // 提取坐标数据
                         var location = response.data.results[0].geometry.location;
-                        console.log(location);
                         var infoWindow = new google.maps.InfoWindow;
                         var marker = new google.maps.Marker({
                             map: map,
