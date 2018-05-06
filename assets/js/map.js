@@ -3,7 +3,7 @@ var map; // global variable
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 8,
         center: new google.maps.LatLng(43.6532, -79.3832),
         mapTypeId: 'terrain'
     });
@@ -32,6 +32,9 @@ function geocode() {
                     function (response) {
                         // 提取坐标数据
                         var location = response.data.results[0].geometry.location;
+                        var contentString = ""
+                            .concat('地址: ' + address + '<br>')
+                            .concat('租期: ' + $(markerElem).attr('start_time') + "至" + $(markerElem).attr('end_time'));
                         var infoWindow = new google.maps.InfoWindow;
                         var marker = new google.maps.Marker({
                             map: map,
