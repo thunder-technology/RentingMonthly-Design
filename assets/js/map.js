@@ -21,6 +21,8 @@ function initMap() {
             addresses.push(address);
         });
     });
+
+    geocode();
 }
 
 function geocode() {
@@ -49,4 +51,3 @@ function geocode() {
     }
 }
 
-geocode();
