@@ -3,8 +3,7 @@ var addresses = [];
 
 function initialize()
 {
-    initMap();
-    geocode();
+    initMap().done(geocode());
 }
 function initMap() {
     $("#map").
@@ -13,6 +12,7 @@ function initMap() {
             center: new google.maps.LatLng(43.6532, -79.3832),
             mapTypeId: 'terrain'
         });
+    marker.addListener('click', toggleBounce);
 
     var infoWindow = new google.maps.InfoWindow;
     //获取数据库的所有租房信息
@@ -27,6 +27,14 @@ function initMap() {
             addresses.push(address);
         });
     });
+}
+
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
 }
 
 function geocode() {
