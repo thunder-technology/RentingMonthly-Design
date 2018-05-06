@@ -3,12 +3,12 @@ var map; // global variable
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 10,
         center: new google.maps.LatLng(43.6532, -79.3832),
         mapTypeId: 'terrain'
     });
 
-    setTimeout(geocode(), 2000);
+    setTimeout(geocode(), 1000);
 }
 
 function geocode() {
