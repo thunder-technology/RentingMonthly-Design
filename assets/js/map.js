@@ -13,7 +13,8 @@ function initMap() {
         var markers = $(data).find('marker');
         // 用geocode分析每一个数据，转化为坐标
         Array.prototype.forEach.call(markers, function(markerElem) {
-            var address = geocode($(markerElem).attr('address'));
+            // 提取地址数据
+            var address = $(markerElem).attr('address');
             // 地址 -> 坐标
             axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
                 params: {
