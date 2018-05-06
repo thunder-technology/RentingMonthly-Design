@@ -1,11 +1,12 @@
+
+var addresses;
 function initMap() {
-    $("#map").slideToggle('slow', function () {
+    $("#map").
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
             center: new google.maps.LatLng(43.6532, -79.3832),
             mapTypeId: 'terrain'
         });
-    });
 
     var infoWindow = new google.maps.InfoWindow;
     //获取数据库的所有租房信息
@@ -17,29 +18,35 @@ function initMap() {
             // 提取地址数据
             var address = $(markerElem).attr('address');
             // 地址 -> 坐标
-            axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
-                params: {
-                    address : address,
-                    key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
-                }
-            })
-                // 异步编程，数据通过ajax添加到map
-                .then(
-                    function (response) {
-                        // 提取坐标数据
-                        var location = response.data.results[0].geometry.location;
-                        console.log(location);
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: location,
-                            draggable: true,
-                            animation: google.maps.Animation.DROP
-                        });
-                    }, function (error) {
-                        console.log(error);
-                    })
+            addresses.add(address);
         });
     });
 }
 
+function geocode() {
+    for(var i = 0; i < addresses.length; i++) {
+        axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
+            params: {
+                address : addresses[i],
+                key : 'AIzaSyDao1DC4cHMICPAzOH93K4nZaswFnk4wP4'
+            }
+        })
+        // 异步编程，数据通过ajax添加到map
+            .then(
+                function (response) {
+                    // 提取坐标数据
+                    var location = response.data.results[0].geometry.location;
+                    console.log(location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: location,
+                        draggable: true,
+                        animation: google.maps.Animation.DROP
+                    });
+                }, function (error) {
+                    console.log(error);
+                })
+    }
+}
 
+geocode();
