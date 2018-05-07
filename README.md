@@ -3,15 +3,16 @@
 ## 网站主要技术架构 Structures
 -   Wordpress 提供后台网站
 -   FastComet 提供Secure Service的主机服务网站
--   Flask   (基于python的轻量级响应式开发框架 (待定))
 -	前端部分
 	-	MVC 框架
 	-	div + css 
-	-	wordpress 插件
-	-	javascript
+	-	javascript(jquery)
+	-	amaze UI
+-	亚马逊AWS
+-	Google Map Service
 
 ## 参考 Reference
--   主页参考
+-   主页设计参考
     -   [Airbnb](https://www.airbnb.com)
     -   [异乡好居](https://www.uhouzz.com)
 -   地图搜索引擎
@@ -72,7 +73,7 @@
 	-	搜索引擎
 		-	可以使用谷歌Api构建站内搜索
 -	数据库设计部分
-	-	可以画出ER Diagram,但是整理的部分只需学习Wordpress自建的基于MySQL的图形化界面
+	-	主要依靠phpmyadmin
 
 
 

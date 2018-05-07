@@ -16,20 +16,53 @@ $.get("select.php", function (data) {
 
         // 添加内容到主页
         if ($(value).attr("area") === "NORTH YORK") {
-            if ($(value).attr("status") === "1") {
+            if ($(value).attr("status") === "0") {
                 $("#north_york_sold").append(content);
             }
-            else if ($(value).attr("status") === "0") {
+            else if ($(value).attr("status") === "1") {
                 $("#north_york_unsold").append(content);
             }
         }
         else if ($(value).attr("area") === "MISSISAUGA") {
-            if ($(value).attr("status") === "1") {
+            if ($(value).attr("status") === "0") {
                 $("#missisauga_sold").append(content);
             }
-            else if ($(value).attr("status") === "0") {
+            else if ($(value).attr("status") === "1") {
                 $("#missisauge_unsold").append(content);
             }
         }
+        else if ($(value).attr("area") === "DOWNTOWN") {
+            if ($(value).attr("status") === "0") {
+                $("#downtown_sold").append(content);
+            }
+            else if ($(value).attr("status") === "1") {
+                $("#downtown_unsold").append(content);
+            }
+        }
+        else if ($(value).attr("area") === "SCARBOROUGH") {
+            if ($(value).attr("status") === "0") {
+                $("#scarborough_sold").append(content);
+            }
+            else if ($(value).attr("status") === "1") {
+                $("#scarborough_unsold").append(content);
+            }
+        }
+        else if ($(value).attr("area") === "VAUGHAN") {
+            if ($(value).attr("status") === "0") {
+                $("#vaughan_sold").append(content);
+            }
+            else if ($(value).attr("status") === "1") {
+                $("#vaughan_unsold").append(content);
+            }
+        }
+        else if ($(value).attr("area") === "MARKHAM") {
+            if ($(value).attr("status") === "0") {
+                $("#markham_sold").append(content);
+            }
+            else if ($(value).attr("status") === "1") {
+                $("#markham_unsold").append(content);
+            }
+        }
+
     });
 });
