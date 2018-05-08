@@ -226,11 +226,11 @@
                     <div class="am-u-sm-12 am-u-md-6" style="width: auto">
                         <div class="am-form-group" style="width: auto">
                             <!--在这里将房子分成了三个大类别以及外加一个所有类别显示-->
-                            <select data-am-selected="{btnSize:'sm'}" style="display:none;">
-                                <option value="option1" id="ALLTYPE">所有类别</option>
-                                <option value="option2" id="HOUSE1">House</option>
-                                <option value="option3" id="TOWNHOUSE1">Townhouse</option>
-                                <option value="option4" id="CONDO1">Condo</option>
+                            <select onchange=goToPage(this.value); data-am-selected="{btnSize:'sm'}" style="display:none;">
+                                <option value="" id="ALLTYPE" >所有类别</option>
+                                <option value="house" id="HOUSE1">House</option>
+                                <option value="townhouse" id="TOWNHOUSE1">Townhouse</option>
+                                <option value="condo" id="CONDO1">Condo</option>
                             </select>
                         </div>
                     </div>

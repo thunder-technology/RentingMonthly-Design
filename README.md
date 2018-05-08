@@ -74,6 +74,9 @@
 		-	可以使用谷歌Api构建站内搜索
 -	数据库设计部分
 	-	主要依靠phpmyadmin
+-	账号系统基于Oauth 2.0, 消息系统基于Slack
+-	备选：Rocket.chat作第三方消息系统
+
 
 
 
