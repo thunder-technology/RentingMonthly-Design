@@ -42,29 +42,3 @@ $.get("select.php", function (data) {
     });
 });
 
-function goToPage(str)
-{
-    $(document).ready(function () {
-        if (str === "")
-        {
-            $("#fangyuan")
-                .change(house_info)
-                .append(townhose_info)
-                .append(condo_info);
-            console.log("ALLTYPE SUCCESS!");
-        }
-        if (str === "house") {
-            $("#fangyuan").change(house_info);
-            console.log("house_info SUCCESS!");
-        }
-        else if (str === "townhouse")
-        {
-            $("#fangyuan").change(townhose_info);
-        }
-        else if(str === "condo")
-        {
-            $("#fangyuan").change(condo_info);
-        }
-    });
-}
-

@@ -281,9 +281,6 @@
 
 
 
-
-
-
     </div>
 
 </div>
@@ -291,5 +288,32 @@
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/select_fangyuan.js"></script>
+<script type="text/javascript">
+    function goToPage(str)
+    {
+        $(document).ready(function () {
+            if (str === "")
+            {
+                $("#fangyuan")
+                    .change(house_info)
+                    .append(townhose_info)
+                    .append(condo_info);
+                console.log("ALLTYPE SUCCESS!");
+            }
+            if (str === "house") {
+                $("#fangyuan").change(house_info);
+                console.log("house_info SUCCESS!");
+            }
+            else if (str === "townhouse")
+            {
+                $("#fangyuan").change(townhose_info);
+            }
+            else if(str === "condo")
+            {
+                $("#fangyuan").change(condo_info);
+            }
+        });
+    }
+</script>
 </body>
 </html>
