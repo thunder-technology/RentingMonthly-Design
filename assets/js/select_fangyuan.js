@@ -28,7 +28,6 @@ $.get("select.php", function (data) {
 
         //添加到列表
         var str = $(value).attr("estate_type");
-        var xhttp;
         if (str === "HOUSE") {
             house_info.concat(fangyuan);
         }
@@ -41,19 +40,22 @@ $.get("select.php", function (data) {
             townhose_info.concat(fangyuan);
         }
     });
-
 });
 
 function goToPage(str)
 {
     $(document).ready(function () {
         if (str === "")
+        {
             $("#fangyuan")
                 .change(house_info)
                 .append(townhose_info)
                 .append(condo_info);
+            console.log("ALLTYPE SUCCESS!");
+        }
         if (str === "house") {
             $("#fangyuan").change(house_info);
+            console.log("house_info SUCCESS!");
         }
         else if (str === "townhouse")
         {
