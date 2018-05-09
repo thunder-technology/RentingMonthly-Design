@@ -18,10 +18,10 @@
 	if ($con->connect_error)
 		die("Connection failed" . $con->connect_error);
 	// connect to query
-	if ($q != "")
-		$sql = "SELECT * FROM estate WHERE type = " . $q;
-	else
+	if ($q = "all")
 		$sql = "SELECT * FROM estate WHERE 1";
+	else
+		$sql = "SELECT * FROM estate WHERE type = " . $q;
 	
 	$result = $con->query($sql);  // apply query
 	if (!$result)
