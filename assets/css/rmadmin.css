@@ -44,6 +44,9 @@
 .box-rule4{
     margin-bottom: 8px;
 }
+.box-rule5{
+    padding-top
+}
 .box-select-fixed{
     width:100%;
     max-width: 320px;
@@ -55,22 +58,6 @@
     display: inline-block;
     position: relative;
     vertical-align: bottom;
-}
-.box-select-rule1{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-    font-size: 19px !important;
-    line-height: 24px !important;
-    color: rgb(72, 72, 72) !important;
-    position: relative !important;
-    margin-bottom: 8px !important;
-    display: block !important;
-    width: 100% !important;
-    background: rgb(255, 255, 255) !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: rgb(219, 219, 219) !important;
-    border-image: initial !important;
-    border-radius: 2px !important;
 }
 
 .box-explain1{
