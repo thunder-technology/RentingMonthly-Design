@@ -1,7 +1,114 @@
-text-dark-gray{
+.text-dark-gray{
     color: #2d2d2d;
 }
 
-btn-margin{
+.btn-margin{
     margin-top: inherit;
+}
+
+.box-rule1{
+    margin-top: 76px;
+
+}
+.am-nav-backgroud1{
+    background: #fff;
+    border-color: #e9ecf3;
+}
+.tpl-page-wrapper-fixed{
+    padding-left: 100px;
+    padding-top: 10px;
+
+}
+.text-font1{
+    font-weight: 700 !important;
+    word-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 28px !important;
+    line-height: 32px !important;
+    letter-spacing: -0.6px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    color: rgb(72, 72, 72) !important;
+    margin: 0px !important;
+}
+.box-rule2{
+    padding-top: 32px !important;
+    padding-bottom: 24px !important;
+    border-bottom: 0px !important;
+    padding-left: 32px !important;
+}
+.box-rule3{
+    margin-top:32px;
+    margin-bottom: 32px;
+}
+.box-rule4{
+    margin-bottom: 8px;
+}
+.box-select-fixed{
+    width:100%;
+    max-width: 320px;
+}
+.box-select-block {
+    display: block;
+}
+.box-select{
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+}
+.box-select-rule1{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
+    color: rgb(72, 72, 72) !important;
+    position: relative !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    width: 100% !important;
+    background: rgb(255, 255, 255) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(219, 219, 219) !important;
+    border-image: initial !important;
+    border-radius: 2px !important;
+}
+
+.box-explain1{
+    font-weight: normal !important;
+    word-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: rgb(118, 118, 118) !important;
+    margin: 0px !important;
+}
+.tpl-page-header-fixed1{
+    margin-top: 40px;
+}
+
+.box-select-rule1-add{
+    overflow: hidden !important;
+}
+.box-select-rule2{
+    -webkit-appearance: none !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 19px !important;
+    line-height: 24px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    color: rgb(72, 72, 72) !important;
+    font-weight: 300 !important;
+    background-color: transparent !important;
+    padding-left: 11px !important;
+    padding-right: 40px !important;
+    height: 46px !important;
+    display: block !important;
+    width: 100% !important;
+    border-width: initial !important;
+    border-style: none !important;
+    border-color: initial !important;
+    border-image: initial !important;
+    border-radius: 0px !important;
 }
