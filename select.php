@@ -10,13 +10,19 @@
 	$username = "root";
 	$pass = "rentingmonthly";
 	$db = "house_info";
-
+	// get the query string from the URL
+	$q = $_GET["q"];
+	
 	$con = new mysqli($servername, $username, $pass, $db);
 
 	if ($con->connect_error)
 		die("Connection failed" . $con->connect_error);
 	// connect to query
-	$sql = "SELECT * FROM estate WHERE 1";
+	if ($q = "all")
+		$sql = "SELECT * FROM estate WHERE 1";
+	else
+		$sql = "SELECT * FROM estate WHERE type = " . $q;
+	
 	$result = $con->query($sql);  // apply query
 	if (!$result)
 	{
