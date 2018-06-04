@@ -45,7 +45,7 @@
     margin-bottom: 8px;
 }
 .box-rule5{
-    padding-top
+    padding-top:15px;
 }
 .box-select-fixed{
     width:100%;
@@ -98,4 +98,10 @@
     border-color: initial !important;
     border-image: initial !important;
     border-radius: 0px !important;
+}
+
+.tpl-page-wrapper-fixed-1{
+    padding-left: 70px;
+    padding-top: 10px;
+    padding-right: 75px;
 }
