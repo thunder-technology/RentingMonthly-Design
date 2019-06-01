@@ -63,6 +63,5 @@ $.get("select.php", function (data) {
                 $("#markham_unsold").append(content);
             }
         }
-
     });
 });

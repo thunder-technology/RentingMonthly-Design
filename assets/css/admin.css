@@ -371,3 +371,9 @@ gallery.html css
   width: 200px;
   margin: 0 auto;
 }
+
+.myapp-login-logo {
+  border: 10em;
+  width: 5em;
+  height: auto;
+}
